@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PinkLilyCare — Practical & Thoughtful Care Products</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--accent:#ff6b9f;--accent-2:#ff9bbf;--bg:#f7f7fa;--card:#ffffff;--muted:#6b6b76}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:#111;background:var(--bg)}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+    .logo{display:flex;gap:12px;align-items:center}
+    .logo .mark{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav{display:flex;gap:16px;align-items:center}
+    .btn-primary{background:var(--accent);color:white;padding:10px 16px;border-radius:10px;font-weight:600}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:36px 0}
+    .hero h1{font-size:34px;margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 18px;font-size:16px}
+    .card{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+
+    .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+    .product{padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.9),#fff);display:flex;flex-direction:column;gap:8px}
+    .product h4{margin:0;font-size:15px}
+    .product p{font-size:13px;color:var(--muted);margin:0}
+
+    .about,.contact{display:flex;gap:20px;align-items:center}
+    .about p{color:var(--muted);line-height:1.6}
+
+    .band{display:flex;justify-content:space-between;align-items:center;padding:18px;border-radius:12px;background:linear-gradient(90deg,#fff 0%,#fff 70%);margin:28px 0}
+
+    footer{padding:28px 0;color:var(--muted);font-size:14px}
+
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .product-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:640px){
+      header{flex-direction:column;align-items:flex-start}
+      nav{margin-top:8px}
+      .product-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="mark">PL</div>
+        <div>
+          <div style="font-weight:700">PinkLilyCare</div>
+          <div style="font-size:13px;color:var(--muted)">Practical & thoughtful care products</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="btn-primary">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <section id="about" style="margin-top:26px">
+        <div class="card about">
+          <div style="flex:1">
+            <p>We are a small team focused on sourcing thoughtful products that solve simple daily problems. We sell primarily on Amazon and offer B2B pricing for distributors, event planners, and retail partners.</p>
+            <p style="margin-top:8px;color:var(--muted)">Fast customer support: <a href="mailto:steve@pinklilycare.com">steve@pinklilycare.com</a></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" style="margin-top:26px">
+        <p style="color:var(--muted);margin-top:6px">Everyday accessories designed for reliability and ease of use.</p>
+
+        <div class="product-grid">
+          <div class="product card">
+            <h4>Cochlear Implant Headband</h4>
+            <p>Secure wearing for sports or daily activity.</p>
+          </div>
+
+          <div class="product card">
+            <h4>Medical Alert Keychain</h4>
+            <p>Bright, durable tag for insulin-dependent users and other needs.</p>
+          </div>
+
+          <div class="product card">
+            <h4>Mouse Ear Holder</h4>
+            <p>Clip or lanyard options — perfect for theme park visits.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:26px">
+        <div class="card">
+          <h3>Get in touch</h3>
+          <p style="color:var(--muted);margin-top:6px">For customer support, wholesale inquiries, or press, email us directly:</p>
+          <p style="margin:10px 0"><a href="mailto:steve@pinklilycare.com" class="btn-primary">steve@pinklilycare.com</a></p>
+
+          <form action="mailto:steve@pinklilycare.com" method="post" enctype="text/plain" style="display:grid;gap:8px;max-width:540px">
+            <input name="Name" placeholder="Your name" style="padding:10px;border-radius:8px;border:1px solid #e4e4ef">
+            <input name="Email" placeholder="Your email" style="padding:10px;border-radius:8px;border:1px solid #e4e4ef">
+            <textarea name="Message" placeholder="How can we help?" rows="4" style="padding:10px;border-radius:8px;border:1px solid #e4e4ef"></textarea>
+            <div style="display:flex;gap:8px">
+              <button type="submit" class="btn-primary">Send email</button>
+              <button type="reset" style="padding:10px;border-radius:8px;border:1px solid #e4e4ef;background:transparent">Reset</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <div class="band">
+        <div>
+          <strong>Easy returns • Fast shipping • Trusted on Amazon</strong>
+          <div style="color:var(--muted);font-size:13px;margin-top:6px">Questions? Email <a href="mailto:steve@pinklilycare.com">steve@pinklilycare.com</a></div>
+        </div>
+        <div style="text-align:right;color:var(--muted)">
+          <div style="font-size:13px">Based in the USA</div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>© <strong>PinkLilyCare</strong> — Practical & thoughtful care products</div>
+        <div style="color:var(--muted)">Email: <a href="mailto:steve@pinklilycare.com">steve@pinklilycare.com</a> • <a href="#">Privacy</a> • <a href="#">Terms</a></div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
